@@ -4,7 +4,7 @@ exports.LoginPage = class LoginPage{
     static async goto(){
         browser.url('https://www.saucedemo.com/')
         // const loginLogo = await $('.login_logo')
-        await expect(await $('.login_logo')).toHaveText("Swag Labs")
+        await expect($('.login_logo')).toHaveText("Swag Labs")
     }
 
     static async writeUserName(username){
