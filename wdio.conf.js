@@ -21,9 +21,10 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        // './test/specs/**/*.js',
+        './test/**/*-spec.js'
     ],
-    // Patterns to exclude.
+    // Patterns to exclude.n
     exclude: [
         // 'path/to/excluded/files'
     ],
@@ -50,7 +51,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        maxInstances: 1,
+        maxInstances: 2,
         browserName: 'chrome',
         'goog:chromeOptions': {
             args: [
@@ -133,7 +134,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['mochawesome',{outputDir: './results'}]],
+    reporters: ['spec'],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
