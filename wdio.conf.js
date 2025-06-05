@@ -21,12 +21,13 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // './test/specs/**/*.js',
+        './test/specs/**/*.js',
         './test/**/*-spec.js'
     ],
     // Patterns to exclude.n
     exclude: [
-        // 'path/to/excluded/files'
+        // 'path/to/excluded/files',
+        './test/specs/test.e2e.js',
     ],
     //
     // ============
@@ -57,7 +58,7 @@ exports.config = {
             args: [
                 '--no-sandbox',
                 '--disable-infobars',
-                '--headless',
+                // '--headless',
                 '--disable-gpu',
                 '--window-size=1440,735'
             ],
