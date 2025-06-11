@@ -18,11 +18,11 @@ describe('full flow', () => {
         await expect(browser).toHaveUrl(INVENTORY_PAGE_URL);
         const availableItemCount = await InventoryPage.getItemCount();
         let randomIndex1 = Math.floor(Math.random() * availableItemCount);
-        let randomIndex2 = randomIndex1;
+        let randomIndex2 = Math.floor(Math.random() * availableItemCount);
         // console.log("\n----")
         // console.log(availableItemCount,randomIndex1,randomIndex2)
         while (randomIndex1 === randomIndex2) {
-            randomIndex2 = Math.floor(Math.random() * availableItemCount);
+            randomIndex2 = await Math.floor(Math.random() * availableItemCount);
         }
         await InventoryPage.clickNthAddToCartButton(randomIndex1);
         await InventoryPage.clickNthAddToCartButton(randomIndex2);
