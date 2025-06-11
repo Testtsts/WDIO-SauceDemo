@@ -1,3 +1,19 @@
+const defaultCapabilities= [{
+        maxInstances: 2,
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+            ],
+        }
+    }]
+
+const debug = process.env.DEBUG
+
 exports.config = {
     //
     // ====================
@@ -45,25 +61,15 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: debug ? 1 : 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        maxInstances: 2,
-        browserName: 'chrome',
-        'goog:chromeOptions': {
-            args: [
-                '--no-sandbox',
-                '--disable-infobars',
-                '--headless',
-                '--disable-gpu',
-                '--window-size=1440,735'
-            ],
-        }
-    }],
+    capabilities: debug ? [{ browserName: 'chrome' }] : defaultCapabilities,
+
+    execArgv: debug? ['--inspect-brk'] : [],
 
     //
     // ===================
