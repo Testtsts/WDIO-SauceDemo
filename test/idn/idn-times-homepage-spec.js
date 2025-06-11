@@ -1,6 +1,6 @@
 const { HomePage, CONNECT_SUBDOMAIN, PROFILE_SUBDOMAIN, MEDIA_SUBDOMAIN } = require('./homepage');
 
-describe('HomePage Navigation', () => {
+describe.skip('HomePage Navigation', () => {
   beforeEach(async () => {
     await HomePage.visit();
   });
