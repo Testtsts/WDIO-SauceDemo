@@ -5,7 +5,8 @@ const defaultCapabilities= [{
             args: [
                 '--no-sandbox',
                 '--disable-infobars',
-                '--headless',
+                '--disable-notifications',
+                '--disable-popup-blocking',
                 '--disable-gpu',
                 '--window-size=1440,735'
             ],
@@ -67,7 +68,13 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: debug ? [{ browserName: 'chrome' }] : defaultCapabilities,
+    capabilities: debug ? defaultCapabilities : defaultCapabilities.map(cap=>({
+        ...cap,
+        'goog:chromeOptions':{
+            ...cap['goog:chromeOptions'],
+            args: [...cap['goog:chromeOptions'].args, '--headless']
+        }
+    })),
 
     execArgv: debug? ['--inspect-brk'] : [],
 
@@ -149,7 +156,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: debug? (60000*60*24) : 60000
+        timeout: (60000*60*24)
     },
 
     //

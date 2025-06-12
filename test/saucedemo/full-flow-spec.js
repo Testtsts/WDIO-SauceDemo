@@ -21,7 +21,7 @@ describe('Sauce Demo order item', () => {
         let randomIndex2 = Math.floor(Math.random() * availableItemCount);
         // console.log("\n----")
         // console.log(availableItemCount,randomIndex1,randomIndex2)
-        while (randomIndex1 === randomIndex2) {
+        while (randomIndex1 === randomIndex2){
             randomIndex2 = await Math.floor(Math.random() * availableItemCount);
         }
         await InventoryPage.clickNthAddToCartButton(randomIndex1);
