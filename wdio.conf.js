@@ -69,7 +69,7 @@ exports.config = {
     //
     capabilities: debug ? [{ browserName: 'chrome' }] : defaultCapabilities,
 
-    execArgv: debug? ['--inspect'] : [],
+    execArgv: debug? ['--inspect-brk'] : [],
 
     //
     // ===================

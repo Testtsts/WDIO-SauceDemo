@@ -2,8 +2,8 @@ const {$,$$} = require('@wdio/globals')
 
 exports.InventoryPage = class InventoryPage{
 
-    static async clickNthAddToCartButton(index) {
-        return await $$('[data-test="inventory-item"] button')[index].click();
+    static clickNthAddToCartButton(index) {
+        return $$('[data-test="inventory-item"] button')[index].click();
     }
     static getItemCount(){
         // return cy.get('[data-test="inventory-item"] button').its('length').as(indexVariable);
