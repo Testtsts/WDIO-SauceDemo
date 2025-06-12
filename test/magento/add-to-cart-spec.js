@@ -12,8 +12,8 @@ describe("magento order suite", ()=>{
     await HomePage.searchForItem('Pierce');
     await expect(await CatalogSearch.getNthProduct(0)).toBeDisplayed();
     await CatalogSearch.getNthProduct(0).click();
-    await ProductDetail.getColorOption()[0].click();
     await ProductDetail.getSizeOption()[0].click();
+    await ProductDetail.getColorOption()[0].click();
     await ProductDetail.fillQtyField(5);
     await ProductDetail.clickAddToCartButton();
     await expect(await GlobalElements.getCartCounter()).toHaveText('5');
