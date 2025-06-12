@@ -1,5 +1,4 @@
-const { browser } = require('@wdio/globals')
-const {$,$$} = require('@wdio/globals')
+const {$,$$,browser} = require('@wdio/globals')
 
 exports.MenuPage = class MenuPage{
 
@@ -29,7 +28,7 @@ exports.MenuPage = class MenuPage{
     }
 
     static addNthItemToCart(itemIndex){
-        return $$('//*[contains(@class, "mdc-button__label") and contains(text(), "Add")]')[itemIndex].click();
+        return $$('aria/add-button')[itemIndex].click();
     }
 
     static goToCart(){
