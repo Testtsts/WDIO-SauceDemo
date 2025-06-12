@@ -6,9 +6,9 @@ const defaultCapabilities= [{
                 '--no-sandbox',
                 '--disable-infobars',
                 '--disable-notifications',
-                '--disable-popup-blocking',
                 '--disable-gpu',
-                '--window-size=1440,735'
+                '--window-size=1440,735',
+                '--guest'
             ],
         }
     }]
@@ -156,7 +156,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: (60000*60*24)
+        timeout: 60000*60*24
     },
 
     //
