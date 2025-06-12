@@ -8,8 +8,8 @@ const {CheckoutComplete, CHECKOUT_COMPLETE_URL, CHECKOUT_ONE_URL, CHECKOUT_TWO_U
 const STANDARD_USERNAME = "standard_user";
 const GENERIC_PASSWORD = "secret_sauce";
 
-describe('full flow', () => {
-    it('e2e', async () => {
+describe('Sauce Demo order item', () => {
+    it('Should be able to checkout', async () => {
         // Go to login page
         await LoginPage.goto();
         await LoginPage.writeUserName(STANDARD_USERNAME);
