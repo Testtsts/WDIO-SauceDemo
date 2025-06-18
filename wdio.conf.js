@@ -9,7 +9,8 @@ const defaultCapabilities= [{
                 '--disable-gpu',
                 '--window-size=1440,735',
                 '--guest',
-                '--disable-dev-shm-usage'
+                '--disable-dev-shm-usage',
+                '--disable-popup-blocking'
             ],
         },
         'webSocketUrl': true,
