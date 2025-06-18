@@ -11,7 +11,8 @@ const defaultCapabilities= [{
                 '--guest',
                 '--disable-dev-shm-usage'
             ],
-        }
+        },
+        'webSocketUrl': true,
     }]
 
 const debug = process.env.DEBUG
