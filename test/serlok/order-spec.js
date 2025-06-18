@@ -17,7 +17,7 @@ describe('serlok online order menu', ()=>{
         await MenuPage.continuePayment();
         await expect(browser).toHaveUrl(/payment/);
         await MenuPage.continueAsGuest();
-        await expect(await MenuPage.getTableNum()).toHaveValue('180');
-        await expect(await MenuPage.getPayButton()).toBeDisplayed();
+        await expect(MenuPage.getTableNum()).toHaveValue('180');
+        await expect(MenuPage.getPayButton()).toBeDisplayed();
     })
 })

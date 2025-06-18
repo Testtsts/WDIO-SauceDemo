@@ -14,7 +14,7 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.selectItemByName("Nokia lumia 1520");
         await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
-        await expect(await DemoBlazePom.getTotalPrice()).toHaveText("1180");
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("1180");
         await DemoBlazePom.placeOrder();
         await DemoBlazePom.fillName(faker.person.fullName())
         await DemoBlazePom.fillCountry("Indonesia");
@@ -24,7 +24,8 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.fillYear("2030");
         await DemoBlazePom.clickPurchase();
         await DemoBlazePom.closeOrderSummary();
-        await expect(await DemoBlazePom.getTotalPrice()).not.toExist()
+        await browser.refresh();
+        await expect(DemoBlazePom.getTotalPrice()).not.toBeDisplayed()
     })
 
     it("should success delete item from cart", async ()=>{
@@ -40,8 +41,8 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.selectItemByName("Nexus 6");
         await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
-        await expect(await DemoBlazePom.getTotalPrice()).toHaveText("2030");
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("2030");
         await DemoBlazePom.removeItemFromCartByName("HTC One M9")
-        await expect(await DemoBlazePom.getTotalPrice()).toHaveText("1330");
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("1330");
     })
 })

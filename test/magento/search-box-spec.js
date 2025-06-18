@@ -8,7 +8,7 @@ describe("magento search function", ()=>{
         expect(browser).toHaveUrl(HOME_URL);
         await HomePage.searchForItem("jacket");
         expect(browser).toHaveUrl(/CatalogSearch/)
-        await expect(await CatalogSearch.getNthProduct(0)).toHaveText(/Jacket/)
+        await expect(CatalogSearch.getNthProduct(0)).toHaveText(/Jacket/)
     })
 
 })
