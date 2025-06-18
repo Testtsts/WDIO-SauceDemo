@@ -66,6 +66,10 @@ exports.DemoBlazePom = class DemoBlazePom{
     static closeOrderSummary(){
         return $(".confirm.btn.btn-lg.btn-primary").click();
     }
+
+    static clickHomeButton(){
+        return $("#nava").click();
+    }
     
 }
 

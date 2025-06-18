@@ -10,8 +10,7 @@ describe("Demo blaze order", ()=>{
     it("should success order item from cart", async()=>{
         await DemoBlazePom.selectItemByName("Samsung galaxy s6");
         await DemoBlazePom.addToCart();
-        await browser.back();
-        await browser.back();
+        await DemoBlazePom.clickHomeButton();
         await DemoBlazePom.selectItemByName("Nokia lumia 1520");
         await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
@@ -25,22 +24,19 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.fillYear("2030");
         await DemoBlazePom.clickPurchase();
         await DemoBlazePom.closeOrderSummary();
-        await expect(await DemoBlazePom.getTotalPrice()).not.toBeDisplayed()
+        await expect(await DemoBlazePom.getTotalPrice()).not.toExist()
     })
 
     it("should success delete item from cart", async ()=>{
         await DemoBlazePom.selectItemByName("Samsung galaxy s6");
         await DemoBlazePom.addToCart();
-        await browser.back();
-        await browser.back();
+        await DemoBlazePom.clickHomeButton();
         await DemoBlazePom.selectItemByName("Sony xperia z5");
         await DemoBlazePom.addToCart();
-        await browser.back();
-        await browser.back();
+        await DemoBlazePom.clickHomeButton();
         await DemoBlazePom.selectItemByName("HTC One M9");
         await DemoBlazePom.addToCart();
-        await browser.back();
-        await browser.back();
+        await DemoBlazePom.clickHomeButton();
         await DemoBlazePom.selectItemByName("Nexus 6");
         await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
