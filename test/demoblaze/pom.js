@@ -9,7 +9,6 @@ exports.DemoBlazePom = class DemoBlazePom{
 
     static selectItemByName(itemName){
         return $(`.hrefch*=${itemName}`).click();
-        return $(`//a[contains(@class, 'hrefch') and text()="${itemName}"]`).click();
     }
 
     static addToCart(){

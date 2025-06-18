@@ -24,8 +24,8 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.fillYear("2030");
         await DemoBlazePom.clickPurchase();
         await DemoBlazePom.closeOrderSummary();
-        await browser.refresh();
-        await expect(DemoBlazePom.getTotalPrice()).not.toBeDisplayed()
+        // await DemoBlazePom.goToCart();
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText('')
     })
 
     it("should success delete item from cart", async ()=>{
