@@ -5,7 +5,9 @@ IMAGE_NAME=$1
 OUTPUT_FILE="${2:-data.txt}"
 
 # Start the container
-docker run --name "$CONTAINER_NAME" --rm "$IMAGE_NAME" npm run wdio &&
+docker run --name "$CONTAINER_NAME" --rm "$IMAGE_NAME" \
+npm run wdio \
+&
 
 # Print column headers
 echo "Timestamp Container_Name Container_ID CPU_Usage Memory_Usage Memory_Percent Net_IO Block_IO PIDs" > "$OUTPUT_FILE" 

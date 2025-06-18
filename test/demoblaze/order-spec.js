@@ -4,17 +4,17 @@ const {$,$$,browser, expect} = require('@wdio/globals')
 
 describe("Demo blaze order", ()=>{
     beforeEach(async()=>{
-        DemoBlazePom.visit();
+        await DemoBlazePom.visit();
         expect(browser).toHaveUrl(HOMEPAGE_URL);
     })
     it("should success order item from cart", async()=>{
         await DemoBlazePom.selectItemByName("Samsung galaxy s6");
         await DemoBlazePom.addToCart();
-        await DemoBlazePom.clickHomeButton();
-        await DemoBlazePom.selectItemByName("Nokia lumia 1520");
-        await DemoBlazePom.addToCart();
+        // await DemoBlazePom.clickHomeButton();
+        // await DemoBlazePom.selectItemByName("Nokia lumia 1520");
+        // await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
-        await expect(DemoBlazePom.getTotalPrice()).toHaveText("1180");
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("360");
         await DemoBlazePom.placeOrder();
         await DemoBlazePom.fillName(faker.person.fullName())
         await DemoBlazePom.fillCountry("Indonesia");
@@ -24,7 +24,8 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.fillYear("2030");
         await DemoBlazePom.clickPurchase();
         await DemoBlazePom.closeOrderSummary();
-        // await DemoBlazePom.goToCart();
+        await DemoBlazePom.visit();
+        await DemoBlazePom.goToCart();
         await expect(DemoBlazePom.getTotalPrice()).toHaveText('')
     })
 
@@ -34,15 +35,15 @@ describe("Demo blaze order", ()=>{
         await DemoBlazePom.clickHomeButton();
         await DemoBlazePom.selectItemByName("Sony xperia z5");
         await DemoBlazePom.addToCart();
-        await DemoBlazePom.clickHomeButton();
-        await DemoBlazePom.selectItemByName("HTC One M9");
-        await DemoBlazePom.addToCart();
-        await DemoBlazePom.clickHomeButton();
-        await DemoBlazePom.selectItemByName("Nexus 6");
-        await DemoBlazePom.addToCart();
+        // await DemoBlazePom.clickHomeButton();
+        // await DemoBlazePom.selectItemByName("HTC One M9");
+        // await DemoBlazePom.addToCart();
+        // await DemoBlazePom.clickHomeButton();
+        // await DemoBlazePom.selectItemByName("Nexus 6");
+        // await DemoBlazePom.addToCart();
         await DemoBlazePom.goToCart();
-        await expect(DemoBlazePom.getTotalPrice()).toHaveText("2030");
-        await DemoBlazePom.removeItemFromCartByName("HTC One M9")
-        await expect(DemoBlazePom.getTotalPrice()).toHaveText("1330");
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("680");
+        await DemoBlazePom.removeItemFromCartByName("Samsung galaxy s6")
+        await expect(DemoBlazePom.getTotalPrice()).toHaveText("320");
     })
 })
