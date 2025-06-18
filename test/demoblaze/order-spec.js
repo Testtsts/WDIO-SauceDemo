@@ -6,8 +6,12 @@ describe("Demo blaze order", ()=>{
     beforeEach(async()=>{
         await DemoBlazePom.visit();
         expect(browser).toHaveUrl(HOMEPAGE_URL);
+        browser.on('dialog', async (dialog) => {
+            await dialog.dismiss()
+        })
     })
     it("should success order item from cart", async()=>{
+        
         await DemoBlazePom.selectItemByName("Samsung galaxy s6");
         await DemoBlazePom.addToCart();
         // await DemoBlazePom.clickHomeButton();

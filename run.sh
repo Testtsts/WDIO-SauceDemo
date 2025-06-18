@@ -5,9 +5,9 @@ IMAGE_NAME=$1
 OUTPUT_FILE="${2:-data.txt}"
 
 # Start the container
-docker run --name "$CONTAINER_NAME" --rm "$IMAGE_NAME" \
-npm run wdio \
-&
+docker run --name "$CONTAINER_NAME" \
+  -d "$IMAGE_NAME"\
+  npm run wdio
 
 # Print column headers
 echo "Timestamp Container_Name Container_ID CPU_Usage Memory_Usage Memory_Percent Net_IO Block_IO PIDs" > "$OUTPUT_FILE" 
@@ -17,7 +17,7 @@ while docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" &>/dev/null
   timestamp=$(date '+%F %T')
 
   # Use timeout to prevent hang
-  STATS=$(timeout 0.9s docker stats --no-stream --format "{{.Name}} {{.ID}} {{.CPUPerc}} {{.MemUsage}} {{.MemPerc}} {{.NetIO}} {{.BlockIO}} {{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
+  STATS=$(docker stats --no-stream --format "{{.Name}} {{.ID}} {{.CPUPerc}} {{.MemUsage}} {{.MemPerc}} {{.NetIO}} {{.BlockIO}} {{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
 
   if [ -n "$STATS" ]; then
     echo "$timestamp $STATS" >> "$OUTPUT_FILE"
@@ -26,3 +26,4 @@ while docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" &>/dev/null
   fi
   
 done
+docker container stop $CONTAINER_NAME
