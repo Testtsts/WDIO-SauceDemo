@@ -1,4 +1,3 @@
-# Stage 1: Prepare the application code and install dependencies
 FROM node:22.2.0
 RUN apt-get update -y && \
  apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 \
@@ -17,7 +16,4 @@ RUN apt-get -y install ./google-chrome-stable_current_amd64.deb
 RUN npm install
 
 CMD xvfb-run google-chrome --version \
-# && xvfb-run ./node_modules/chromedriver/bin/chromedriver --version \
 && xvfb-run npx wdio
-
-# CMD xvfb-run npx wdio
