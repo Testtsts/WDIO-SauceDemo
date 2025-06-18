@@ -1,25 +1,34 @@
 #!/bin/bash
 
-CONTAINER_NAME="${3:-wdio-test-container}"
-IMAGE_NAME=$1
-OUTPUT_FILE="${2:-data.txt}"
+CONTAINER_NAME="${4:-wdio-test-container}${3}"
+IMAGE_NAME="${1}"
+OUTPUT_FILE="${2:-data.txt}${3}"
 
 # Start the container
-docker run --name "$CONTAINER_NAME" \
-  -d "$IMAGE_NAME"\
+# docker run --name "$CONTAINER_NAME" \
+#   -d "$IMAGE_NAME"\
+#   npm run wdio
+
+docker run --mount type=bind,src="$(pwd)/wdio.conf.js",dst=/app/wdio.conf.js --name "$CONTAINER_NAME" -d "$IMAGE_NAME"\
   npm run wdio
 
+
 # Print column headers
-echo "Timestamp,Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs" > "$OUTPUT_FILE" 
+echo "Time (s),CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs" > "$OUTPUT_FILE" 
 
 # Start monitoring loop
 # while docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" &>/dev/null; do
+
+start_time=$(date +%s)
+
 while [ "$(docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" 2>/dev/null)" = "true" ]; do
 
-  timestamp=$(date '+%F-%T')
+  # timestamp=$(date '+%F::%T')
+  current_time=$(date +%s)
+  timestamp=$((current_time - start_time))
 
-  # Use timeout to prevent hang
   STATS=$(docker stats --no-stream --format "{{.Name}},{{.ID}},{{.CPUPerc}},{{.MemUsage}},{{.MemPerc}},{{.NetIO}},{{.BlockIO}},{{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
+  # STATS=$(docker stats --no-stream --format "{{.CPUPerc}},{{.MemUsage}},{{.MemPerc}},{{.NetIO}},{{.BlockIO}},{{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
 
   if [ -n "$STATS" ]; then
     echo "$timestamp,$STATS" >> "$OUTPUT_FILE"
