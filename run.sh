@@ -10,17 +10,19 @@ docker run --name "$CONTAINER_NAME" \
   npm run wdio
 
 # Print column headers
-echo "Timestamp Container_Name Container_ID CPU_Usage Memory_Usage Memory_Percent Net_IO Block_IO PIDs" > "$OUTPUT_FILE" 
+echo "Timestamp,Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs" > "$OUTPUT_FILE" 
 
 # Start monitoring loop
-while docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" &>/dev/null; do
-  timestamp=$(date '+%F %T')
+# while docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" &>/dev/null; do
+while [ "$(docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" 2>/dev/null)" = "true" ]; do
+
+  timestamp=$(date '+%F-%T')
 
   # Use timeout to prevent hang
-  STATS=$(docker stats --no-stream --format "{{.Name}} {{.ID}} {{.CPUPerc}} {{.MemUsage}} {{.MemPerc}} {{.NetIO}} {{.BlockIO}} {{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
+  STATS=$(docker stats --no-stream --format "{{.Name}},{{.ID}},{{.CPUPerc}},{{.MemUsage}},{{.MemPerc}},{{.NetIO}},{{.BlockIO}},{{.PIDs}}" 2>/dev/null | grep "$CONTAINER_NAME")
 
   if [ -n "$STATS" ]; then
-    echo "$timestamp $STATS" >> "$OUTPUT_FILE"
+    echo "$timestamp,$STATS" >> "$OUTPUT_FILE"
   else
     echo "$timestamp ERROR timeout or no output" >> "$OUTPUT_FILE"
   fi
