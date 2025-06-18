@@ -2,7 +2,7 @@
 
 CONTAINER_NAME="${4:-wdio-test-container}${3}"
 IMAGE_NAME="${1}"
-OUTPUT_FILE="${2:-data.txt}${3}"
+OUTPUT_FILE="${2:-wdio-resource-usage.txt}${3}"
 
 # Start the container
 # docker run --name "$CONTAINER_NAME" \
