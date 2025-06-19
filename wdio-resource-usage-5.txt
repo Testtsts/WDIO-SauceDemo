@@ -1,0 +1,22 @@
+Time (s),Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs
+1,wdio-test-container-5,7cd2171f8c67,101.93%,85.05MiB / 7.684GiB,1.08%,8.11kB / 2.12kB,0B / 0B,27
+3,wdio-test-container-5,7cd2171f8c67,660.97%,350.7MiB / 7.684GiB,4.46%,10.3MB / 141kB,0B / 0B,87
+6,wdio-test-container-5,7cd2171f8c67,611.00%,846.2MiB / 7.684GiB,10.75%,10.3MB / 141kB,0B / 0B,87
+8,wdio-test-container-5,7cd2171f8c67,647.40%,1.508GiB / 7.684GiB,19.63%,10.3MB / 161kB,24.6kB / 10.1MB,648
+11,wdio-test-container-5,7cd2171f8c67,732.00%,1.846GiB / 7.684GiB,24.03%,16.4MB / 525kB,32.8kB / 11.7MB,718
+16,wdio-test-container-5,7cd2171f8c67,738.10%,1.973GiB / 7.684GiB,25.68%,18.7MB / 961kB,32.8kB / 11.9MB,747
+19,wdio-test-container-5,7cd2171f8c67,720.25%,2.215GiB / 7.684GiB,28.82%,23.6MB / 1.37MB,32.8kB / 12.5MB,919
+22,wdio-test-container-5,7cd2171f8c67,658.25%,2.479GiB / 7.684GiB,32.27%,47.9MB / 2.03MB,36.9kB / 28.1MB,1123
+26,wdio-test-container-5,7cd2171f8c67,1138.44%,2.59GiB / 7.684GiB,33.71%,65.8MB / 2.54MB,36.9kB / 41.3MB,1182
+31,wdio-test-container-5,7cd2171f8c67,869.66%,2.589GiB / 7.684GiB,33.70%,72.9MB / 3.07MB,36.9kB / 60.3MB,1137
+35,wdio-test-container-5,7cd2171f8c67,647.34%,2.369GiB / 7.684GiB,30.84%,73.3MB / 3.26MB,36.9kB / 60.3MB,1018
+38,wdio-test-container-5,7cd2171f8c67,417.75%,2.5GiB / 7.684GiB,32.53%,84.8MB / 3.45MB,36.9kB / 68.7MB,1031
+40,wdio-test-container-5,7cd2171f8c67,299.92%,2.607GiB / 7.684GiB,33.93%,89.1MB / 3.51MB,36.9kB / 75MB,1032
+43,wdio-test-container-5,7cd2171f8c67,416.70%,2.355GiB / 7.684GiB,30.65%,100MB / 3.65MB,36.9kB / 81.7MB,1031
+46,wdio-test-container-5,7cd2171f8c67,270.68%,1.532GiB / 7.684GiB,19.94%,106MB / 3.82MB,36.9kB / 195MB,764
+49,wdio-test-container-5,7cd2171f8c67,13.85%,1.337GiB / 7.684GiB,17.40%,106MB / 3.82MB,36.9kB / 195MB,746
+51,wdio-test-container-5,7cd2171f8c67,13.84%,1.327GiB / 7.684GiB,17.27%,106MB / 3.82MB,36.9kB / 195MB,742
+54,wdio-test-container-5,7cd2171f8c67,68.01%,1.33GiB / 7.684GiB,17.31%,106MB / 3.83MB,36.9kB / 195MB,742
+56,wdio-test-container-5,7cd2171f8c67,126.89%,795.8MiB / 7.684GiB,10.11%,107MB / 3.97MB,36.9kB / 195MB,439
+59,wdio-test-container-5,7cd2171f8c67,134.12%,538.1MiB / 7.684GiB,6.84%,107MB / 4.05MB,36.9kB / 195MB,225
+61,wdio-test-container-5,7cd2171f8c67,17.54%,559.6MiB / 7.684GiB,7.11%,107MB / 4.1MB,36.9kB / 195MB,225
