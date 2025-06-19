@@ -5,12 +5,14 @@ IMAGE_NAME="${1}"
 OUTPUT_FILE="wdio-resource-usage${2}.txt"
 
 # Start the container
-# docker run --name "$CONTAINER_NAME" \
-#   -d "$IMAGE_NAME"\
-#   npm run wdio
-
-docker run --mount type=bind,src="$(pwd)/wdio.conf.js",dst=/app/wdio.conf.js --name "$CONTAINER_NAME" -d "$IMAGE_NAME"\
+docker run --name "$CONTAINER_NAME" \
+  -d "$IMAGE_NAME"\
   npm run wdio
+
+# docker run --mount type=bind,src="$(pwd)/wdio.conf.js",dst=/app/wdio.conf.js\
+#   --mount type=bind,src="$(pwd)/test/demoblaze/",dst=/app/test/demoblaze/\
+#   --name "$CONTAINER_NAME" -d "$IMAGE_NAME"\
+#   npm run wdio
 
 
 # Print column headers
