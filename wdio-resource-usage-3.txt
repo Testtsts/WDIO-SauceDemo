@@ -1,0 +1,14 @@
+Time (s),Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs
+1,wdio-test-container-3,c680d0c5de3a,120.84%,84.19MiB / 7.684GiB,1.07%,952B / 126B,0B / 0B,23
+3,wdio-test-container-3,c680d0c5de3a,275.38%,287.7MiB / 7.684GiB,3.66%,10.3MB / 135kB,0B / 0B,87
+5,wdio-test-container-3,c680d0c5de3a,620.79%,878.5MiB / 7.684GiB,11.17%,10.3MB / 135kB,0B / 0B,94
+8,wdio-test-container-3,c680d0c5de3a,649.58%,1.562GiB / 7.684GiB,20.33%,10.4MB / 163kB,0B / 10.3MB,675
+10,wdio-test-container-3,c680d0c5de3a,650.08%,1.768GiB / 7.684GiB,23.02%,14.8MB / 354kB,0B / 10.7MB,706
+13,wdio-test-container-3,c680d0c5de3a,701.89%,1.989GiB / 7.684GiB,25.89%,18MB / 671kB,0B / 12.3MB,740
+16,wdio-test-container-3,c680d0c5de3a,742.74%,2.07GiB / 7.684GiB,26.93%,19.4MB / 1.05MB,0B / 12.4MB,750
+19,wdio-test-container-3,c680d0c5de3a,743.94%,2.189GiB / 7.684GiB,28.48%,35.4MB / 1.55MB,0B / 18.6MB,769
+24,wdio-test-container-3,c680d0c5de3a,504.92%,1.434GiB / 7.684GiB,18.66%,57.4MB / 1.89MB,0B / 30.4MB,497
+27,wdio-test-container-3,c680d0c5de3a,628.55%,1.465GiB / 7.684GiB,19.06%,80.3MB / 2.24MB,0B / 53.9MB,505
+30,wdio-test-container-3,c680d0c5de3a,327.73%,1.588GiB / 7.684GiB,20.66%,84.1MB / 2.29MB,0B / 65.8MB,501
+32,wdio-test-container-3,c680d0c5de3a,290.11%,1.242GiB / 7.684GiB,16.16%,84.7MB / 2.34MB,0B / 65.8MB,373
+35,wdio-test-container-3,c680d0c5de3a,381.33%,1.03GiB / 7.684GiB,13.40%,85.3MB / 2.4MB,0B / 65.9MB,256

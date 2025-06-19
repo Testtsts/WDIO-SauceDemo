@@ -1,0 +1,15 @@
+Time (s),Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs
+0,wdio-test-container-4,a7edb57f9247,117.49%,85.34MiB / 7.684GiB,1.08%,910B / 84B,0B / 0B,23
+3,wdio-test-container-4,a7edb57f9247,358.24%,315.1MiB / 7.684GiB,4.00%,10.3MB / 145kB,0B / 0B,87
+5,wdio-test-container-4,a7edb57f9247,625.40%,872.4MiB / 7.684GiB,11.09%,10.3MB / 145kB,0B / 0B,93
+8,wdio-test-container-4,a7edb57f9247,645.79%,1.536GiB / 7.684GiB,19.99%,10.4MB / 171kB,4.1kB / 10.1MB,670
+10,wdio-test-container-4,a7edb57f9247,676.82%,1.859GiB / 7.684GiB,24.19%,17MB / 506kB,12.3kB / 11.2MB,714
+14,wdio-test-container-4,a7edb57f9247,706.75%,2.033GiB / 7.684GiB,26.46%,18.7MB / 933kB,12.3kB / 11.8MB,742
+17,wdio-test-container-4,a7edb57f9247,717.31%,2.113GiB / 7.684GiB,27.50%,20.5MB / 1.25MB,12.3kB / 12MB,786
+19,wdio-test-container-4,a7edb57f9247,553.54%,2.178GiB / 7.684GiB,28.35%,39.2MB / 1.65MB,12.3kB / 19.8MB,756
+22,wdio-test-container-4,a7edb57f9247,632.74%,1.396GiB / 7.684GiB,18.17%,61.9MB / 2.18MB,12.3kB / 40.7MB,500
+25,wdio-test-container-4,a7edb57f9247,527.21%,1.473GiB / 7.684GiB,19.17%,70MB / 2.31MB,12.3kB / 51.4MB,511
+27,wdio-test-container-4,a7edb57f9247,490.33%,1.485GiB / 7.684GiB,19.33%,81.6MB / 2.52MB,12.3kB / 62.4MB,506
+30,wdio-test-container-4,a7edb57f9247,320.28%,1.151GiB / 7.684GiB,14.98%,81.7MB / 2.55MB,12.3kB / 62.4MB,373
+32,wdio-test-container-4,a7edb57f9247,340.10%,1.18GiB / 7.684GiB,15.35%,82.3MB / 2.62MB,12.3kB / 62.4MB,373
+35 ERROR timeout or no output
