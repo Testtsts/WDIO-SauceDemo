@@ -1,0 +1,25 @@
+Time (s),Container_Name,Container_ID,CPU_Usage,Memory_Usage,Memory_Percent,Net_IO,Block_IO,PIDs
+0,wdio-test-container-2,76455f1ead5f,112.56%,86.59MiB / 7.684GiB,1.10%,1.08kB / 282B,0B / 0B,27
+2,wdio-test-container-2,76455f1ead5f,479.97%,491.7MiB / 7.684GiB,6.25%,10.3MB / 177kB,0B / 0B,87
+5,wdio-test-container-2,76455f1ead5f,669.81%,890.3MiB / 7.684GiB,11.32%,10.3MB / 177kB,0B / 0B,117
+7,wdio-test-container-2,76455f1ead5f,666.66%,1.558GiB / 7.684GiB,20.28%,10.3MB / 191kB,41kB / 8.59MB,689
+9,wdio-test-container-2,76455f1ead5f,277.11%,1.595GiB / 7.684GiB,20.76%,11MB / 244kB,41kB / 9.86MB,686
+12,wdio-test-container-2,76455f1ead5f,756.31%,1.82GiB / 7.684GiB,23.68%,16.4MB / 560kB,41kB / 11.2MB,712
+15,wdio-test-container-2,76455f1ead5f,709.80%,1.966GiB / 7.684GiB,25.58%,18.2MB / 959kB,41kB / 12.6MB,753
+18,wdio-test-container-2,76455f1ead5f,688.10%,2.105GiB / 7.684GiB,27.40%,20.6MB / 1.28MB,41kB / 13.1MB,787
+21,wdio-test-container-2,76455f1ead5f,709.71%,2.286GiB / 7.684GiB,29.76%,32.7MB / 1.73MB,41kB / 17.4MB,921
+23,wdio-test-container-2,76455f1ead5f,689.06%,2.005GiB / 7.684GiB,26.09%,45.2MB / 2.12MB,41kB / 24.3MB,838
+26,wdio-test-container-2,76455f1ead5f,642.69%,1.935GiB / 7.684GiB,25.18%,59.7MB / 2.48MB,41kB / 30.5MB,905
+29,wdio-test-container-2,76455f1ead5f,831.32%,2.017GiB / 7.684GiB,26.25%,76.3MB / 2.76MB,41kB / 53.9MB,874
+33,wdio-test-container-2,76455f1ead5f,759.02%,2.054GiB / 7.684GiB,26.73%,87.8MB / 3.02MB,41kB / 65.1MB,839
+36,wdio-test-container-2,76455f1ead5f,370.12%,2.17GiB / 7.684GiB,28.24%,92.3MB / 3.08MB,41kB / 76.6MB,840
+38,wdio-test-container-2,76455f1ead5f,340.82%,1.806GiB / 7.684GiB,23.51%,92.9MB / 3.13MB,41kB / 76.6MB,706
+40,wdio-test-container-2,76455f1ead5f,275.02%,1.445GiB / 7.684GiB,18.80%,93.4MB / 3.2MB,41kB / 76.6MB,571
+43,wdio-test-container-2,76455f1ead5f,6.60%,810.4MiB / 7.684GiB,10.30%,93.4MB / 3.21MB,41kB / 76.6MB,430
+45,wdio-test-container-2,76455f1ead5f,14.15%,762.8MiB / 7.684GiB,9.69%,93.4MB / 3.21MB,41kB / 118MB,427
+47,wdio-test-container-2,76455f1ead5f,6.67%,756.8MiB / 7.684GiB,9.62%,93.4MB / 3.21MB,41kB / 118MB,427
+49,wdio-test-container-2,76455f1ead5f,12.28%,755.3MiB / 7.684GiB,9.60%,93.4MB / 3.21MB,41kB / 118MB,421
+52,wdio-test-container-2,76455f1ead5f,6.87%,754.9MiB / 7.684GiB,9.59%,93.4MB / 3.21MB,41kB / 118MB,421
+54,wdio-test-container-2,76455f1ead5f,6.93%,754.9MiB / 7.684GiB,9.59%,93.4MB / 3.21MB,41kB / 118MB,421
+56,wdio-test-container-2,76455f1ead5f,298.05%,613MiB / 7.684GiB,7.79%,93.6MB / 3.28MB,41kB / 118MB,294
+59 ERROR timeout or no output
